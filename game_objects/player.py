@@ -17,10 +17,10 @@ class Player:
         p3 = (self.x + self.width // 2, self.y )
         pygame.draw.polygon(screen, (0, 128, 255), [p1, p2, p3])        
 
-    def handleInput(self):
+    def handleInput(self, pressed_keys):
         # Handle player movement
-        keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT] and self.x > 0:
+        # keys = pygame.key.get_pressed()
+        if pressed_keys[pygame.K_LEFT] and self.x > 0:
             self.x -= self.speed
-        if keys[pygame.K_RIGHT] and self.x < self._screen_width - self.width:
+        if pressed_keys[pygame.K_RIGHT] and self.x < self._screen_width - self.width:
             self.x += self.speed
