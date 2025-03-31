@@ -11,7 +11,7 @@ class MenuScene(SceneBase):
                 # Move to the next scene when the user pressed Enter
                 self.SwitchToScene(GameScene())
     
-    def Update(self):
+    def Update(self, dt):
         pass
     
     def Render(self, screen):

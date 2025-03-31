@@ -1,5 +1,23 @@
+# IDE-Verzeichnisse
 .idea/
 .vscode/
+
+# Virtuelle Environments
+venv/
 .venv/
+
+# Python Cache-Dateien
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# macOS-Dateien
+.DS_Store
+
+# Windows Thumbs
+Thumbs.db
+
+# Log- und temporäre Dateien
+*.log
+*.tmp
+*.swp

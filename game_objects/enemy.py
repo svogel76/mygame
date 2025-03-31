@@ -5,7 +5,7 @@ class Enemy:
     def __init__(self, screen_width, hasShield = False):
         # Enemy settings
         self._width = 50
-        self._height = 60
+        self._height = 50
         self._speed = 2
         
         self.x = random.randint(0, screen_width - self._width)

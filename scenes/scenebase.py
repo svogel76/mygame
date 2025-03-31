@@ -5,7 +5,7 @@ class SceneBase:
     def ProcessInput(self, events):
         print("uh-oh, you didn't override this in the child class")
 
-    def Update(self): 
+    def Update(self, dt): 
         print("uh-oh, you didn't override this in the child class")
 
     def Render(self, screen):

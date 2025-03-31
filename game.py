@@ -1,4 +1,4 @@
-import pygame # type: ignore
+import pygame
 import sys
 
 from scenes import MenuScene
@@ -23,6 +23,7 @@ engine = Engine(screen_width, screen_height, screen)
 active_scene = MenuScene()
 
 while active_scene != None:
+    dt = clock.tick(fps)
     pressed_keys = pygame.key.get_pressed()
     
     # Event filtering
@@ -45,10 +46,10 @@ while active_scene != None:
             filtered_events.append(event)
     
     active_scene.ProcessInput(filtered_events, pressed_keys)
-    active_scene.Update()
+    active_scene.Update(dt)
     active_scene.Render(screen)
     
     active_scene = active_scene.next
     
     pygame.display.flip()
-    clock.tick(fps)
+    
