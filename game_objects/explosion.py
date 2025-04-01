@@ -3,7 +3,7 @@ import pygame
 import random
 
 class ExplosionParticle:
-    def __init__(self, x, y):
+    def __init__(self, x : int, y : int):
         self.x = x
         self.y = y
         self.vx = random.uniform(-2, 2)
@@ -16,12 +16,12 @@ class ExplosionParticle:
             random.randint(0, 50)
         )
 
-    def updateState(self, dt):
+    def updateState(self, dt: int):
         self.x += self.vx
         self.y += self.vy
         self.life -= dt
 
-    def render(self, screen):
+    def render(self, screen : pygame.Surface):
         if self.life > 0:
             pygame.draw.rect(screen, self.color, pygame.Rect(self.x, self.y, self.size, self.size))
 
