@@ -46,7 +46,7 @@ class GameScene(SceneBase):
 
         # GAME SETTINGS
         self._enemy_timer : int = 0
-        self._enemy_spawn_time : int = 2000 # Spawn an enemy every 2 seconds
+        self._enemy_spawn_time : int = 4000 # Spawn an enemy every 2 seconds
 
         # GRAPHICS SETTINGS
         self._screen_width : int = w
@@ -157,7 +157,7 @@ class GameScene(SceneBase):
         txtsurf = font.render(f"Treffer: {self._hits}", True, (255,255,255))
         screen.blit(txtsurf,(50 - txtsurf.get_width() // 2, 20 - txtsurf.get_height() // 2))
 
-        txtlives = font.render(f"Leben: {self.player.lives}", True, (255,255,255))
-        x = screen.get_width() - 50 - txtlives.get_width() // 2
-        y = 20 - txtlives.get_height() // 2
-        screen.blit(txtlives, (x, y))
+        # txtlives = font.render(f"Leben: {self.player.lives}", True, (255,255,255))
+        # x = screen.get_width() - 50 - txtlives.get_width() // 2
+        # y = 20 - txtlives.get_height() // 2
+        # screen.blit(txtlives, (x, y))
